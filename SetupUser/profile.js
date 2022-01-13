@@ -47,7 +47,7 @@ const profile = () => {
                 </View>
             </View>
             <TouchableOpacity style={styles.setup}>
-                <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/557/991/png-clipart-computer-icons-setting-icon-desktop-wallpaper-android-thumbnail.png"}}/>
+                <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw593D1xmTHdIHF9WB15niALdw7Yfwy4o3g674n2oIJdK8qZZemPGsJPe6dyGDw6AtelY&usqp=CAU"}}/>
                 <Text style={styles.text1}>Cài đặt tài khoản</Text>
                 <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_Yr9q0co3_aBUOpqf5oDI7VKUskywP2XidPOmi_mk8CYhwGUQdDHgxzoFF5w8Qd3keo&usqp=CAU"}}/>   
             </TouchableOpacity>
