@@ -7,6 +7,7 @@ const loginscreen = () => {
   const [number, onChangeNumber] = React.useState(null);
   console.log('áasasas');
   const { navigate } = useNavigation();
+  const [isSecureText, setSecureText] = React.useState(true);
 
   return (
     <SafeAreaView>
@@ -17,13 +18,28 @@ const loginscreen = () => {
         placeholder="Email hoặc Số điện thoại"
         value={text}
       />
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="Mật khẩu"
-        keyboardType="numeric"
-      />
+      <View>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeNumber}
+          value={number}
+          placeholder="Mật khẩu"
+          keyboardType="numeric"
+          maxLength={5}
+          secureTextEntry={isSecureText}
+        />
+
+        <TouchableOpacity
+          style={{ flexDirection: 'row', width: 24, height: 24, position: 'absolute', top: 20, right: 30 }} onPress={() => { setSecureText(!isSecureText) }}>
+
+          {!isSecureText ?
+
+            <Image style={{ width: '100%', height: '100%' }} resizeMode="contain" source={{ uri: 'https://icons.iconarchive.com/icons/iconsmind/outline/256/Eye-2-icon.png' }} />
+            : <Image style={{ width: '100%', height: '100%' }} resizeMode="contain" source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScMD3IcMCiSshEopomEAVcP--CPjx9lvVDlw&usqp=CAU' }} />}
+        </TouchableOpacity>
+      
+      </View>
+      
       <TouchableOpacity><Text style={styles.pass} onPress = { () => {navigate('Forget')}}>Quên mật khẩu</Text></TouchableOpacity>
 
       <TouchableOpacity style={styles.button}>

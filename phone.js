@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import OTPInputView from "@twotalltotems/react-native-otp-input";
 
 const phone = () => {
   //const [text, onChangeText] = React.useState(null);
@@ -16,9 +17,15 @@ const phone = () => {
 
       <Text style={styles.iff}>Mã OTP sẽ được gửi đến số điện thoại{"\n"}      đăng ký của bạn trong vài giây</Text>
 
+      <OTPInputView style={{width: '80%', height: 200, alignSelf:'center'}}
+          pinCount={6}
+          //autoFocusOnLoad
+          codeInputFieldStyle={styles.under}
+          codeInputHighlightStyle={styles.underonclick}
+        />
       
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttontext}onPress = { () => {navigate('Phone1')}}>xác nhận</Text>
+        <Text style={styles.buttontext} onPress = { () => {navigate('Phone1')}} >xác nhận</Text>
       </TouchableOpacity>
 
       
@@ -36,6 +43,19 @@ const styles = StyleSheet.create({
     paddingLeft: 25,
     borderRadius: 10,
     
+  },
+  under: {
+    width: 30,
+    height: 45,
+    borderWidth: 0,
+    borderBottomWidth: 1,
+    color:'black',
+    borderColor:'black'
+
+  },
+
+  underonclick: {
+    borderColor: "red",
   },
   logo: {
     width: 166,
