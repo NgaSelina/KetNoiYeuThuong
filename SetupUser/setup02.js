@@ -1,15 +1,18 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput,Image, Text, TouchableOpacity, View } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 const setup02 = () => {
     const [text, onChangeText] = React.useState("Trần trung Giới");
     const [number, onChangeNumber] = React.useState(null);
     const [text1, onChangeText1] = React.useState(null);
 
+    const { navigate, goBack } = useNavigation();
+
   return (
     <SafeAreaView >
         <View style={styles.setup}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress = { () => {goBack()}}>
                 <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/596/53/png-clipart-arrow-computer-icons-arrow-free-creative-pull-cdr-angle-thumbnail.png"}}/>
             </TouchableOpacity>
             <Text style={styles.title}>Thông tin cá nhân</Text>
@@ -41,7 +44,7 @@ const setup02 = () => {
             value={text1}
             placeholder="Xác minh"
         />
-        <TouchableOpacity style={{backgroundColor: 'green',borderRadius: 10,justifyContent: 'center', height: '12%', width: '90%', alignItems: 'center', alignSelf: 'center'}}>
+        <TouchableOpacity onPress = { () => {navigate('phone01')}} style={{backgroundColor: 'green',borderRadius: 10,justifyContent: 'center', height: '12%', width: '90%', alignItems: 'center', alignSelf: 'center'}}>
             <Text style={{fontSize: 14, color: 'white'}}>Hoàn thành</Text>
         </TouchableOpacity>
     </SafeAreaView>

@@ -1,7 +1,10 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 const profile = () => {
+
+    const { navigate, goBack } = useNavigation();
 
     return(
         <SafeAreaView style={{backgroundColor: '#E5E5E5', height: '100%'}}>
@@ -46,7 +49,7 @@ const profile = () => {
                     <Image style={styles.icon} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-Gh6uC11b9BUzfJ1OAuC3MgwwQdOLZL7PA&usqp=CAU"}}/>
                 </View>
             </View>
-            <TouchableOpacity style={styles.setup}>
+            <TouchableOpacity style={styles.setup} onPress = { () => {navigate('setup01')}}>
                 <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/557/991/png-clipart-computer-icons-setting-icon-desktop-wallpaper-android-thumbnail.png"}}/>
                 <Text style={styles.text1}>Cài đặt tài khoản</Text>
                 <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_Yr9q0co3_aBUOpqf5oDI7VKUskywP2XidPOmi_mk8CYhwGUQdDHgxzoFF5w8Qd3keo&usqp=CAU"}}/>   
@@ -64,7 +67,7 @@ const profile = () => {
                 <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_Yr9q0co3_aBUOpqf5oDI7VKUskywP2XidPOmi_mk8CYhwGUQdDHgxzoFF5w8Qd3keo&usqp=CAU"}}/> 
             </TouchableOpacity>
 
-            <View style={{flexDirection: 'row', justifyContent: 'space-between',width: '100%', backgroundColor: 'white', alignSelf: 'center', marginTop: 90}}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-between',width: '100%', backgroundColor: 'white', alignSelf: 'center', marginTop: 70}}>
                 <TouchableOpacity >
                     <Image style={styles.home} resizeMode="contain" source={{uri: "https://p.kindpng.com/picc/s/756-7562129_small-home-small-home-icon-png-transparent-png.png"}}/>
                     <Text style={styles.status}>Trang chủ</Text>

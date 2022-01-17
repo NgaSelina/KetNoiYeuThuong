@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
 
   },
   buttontext: {
-    fontStyle: 14,
-    fontStyle: 'bold',
+    fontSize: 14,
+    fontWeight: 'bold',
     backgroundColor:'green',
     paddingHorizontal: 145,
     paddingVertical: 15,

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, Switch, Text, ImageBackground, Image, TouchableOpacity, View, RecyclerViewBackedScrollViewBase } from "react-native";
-
+import { useNavigation } from '@react-navigation/native';
 
 const setupnote = () => {
+
+    const { navigate, goBack } = useNavigation();
+
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
@@ -12,7 +15,7 @@ const setupnote = () => {
     return(
         <SafeAreaView style={{backgroundColor: 'white', height: '100%'}}>
             <View style={styles.setup1}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress = { () => {goBack()}} >
                     <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/596/53/png-clipart-arrow-computer-icons-arrow-free-creative-pull-cdr-angle-thumbnail.png"}}/>
                 </TouchableOpacity>
                 <Text style={styles.title}>Cài đặt tài khoản</Text>

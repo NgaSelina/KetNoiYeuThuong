@@ -1,14 +1,17 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View, RecyclerViewBackedScrollViewBase } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 const phone01 = () => {
 
     const [number, onChangeNumber] = React.useState(null);
 
+    const { navigate, goBack } = useNavigation();
+
     return(
         <SafeAreaView style={{backgroundColor: 'white', height: '100%'}}>
 
-            <TouchableOpacity style={styles.setup}>
+            <TouchableOpacity style={styles.setup} onPress = { () => {goBack()}}>
                 <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/596/53/png-clipart-arrow-computer-icons-arrow-free-creative-pull-cdr-angle-thumbnail.png"}}/>
             </TouchableOpacity>
 
@@ -29,7 +32,9 @@ const phone01 = () => {
             </View>
 
             <Text style={styles.title01}>Chúng tôi sẽ gửi tin nhắn có kèm OTP cho bạn qua số{"\n"}(+84)</Text>
-            <TouchableOpacity style={{backgroundColor: 'green',borderRadius: 10,justifyContent: 'center',marginTop: 20, height: '8%', width: '90%', alignItems: 'center', alignSelf: 'center'}}>
+            <TouchableOpacity 
+            onPress = { () => {navigate('phone02')}}
+            style={{backgroundColor: 'green',borderRadius: 10,justifyContent: 'center',marginTop: 20, height: '8%', width: '90%', alignItems: 'center', alignSelf: 'center'}}>
                 <Text style={{fontSize: 14, color: 'white'}}>Tiếp tục</Text>
             </TouchableOpacity>
         </SafeAreaView>
