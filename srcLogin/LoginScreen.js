@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import styles from "./styles"
 
 const loginscreen = () => {
   const [text, onChangeText] = React.useState(null);
@@ -10,15 +11,15 @@ const loginscreen = () => {
   const [isSecureText, setSecureText] = React.useState(true);
 
   return (
-    <SafeAreaView>
-      <Image style={styles.logo} resizeMode="contain" source={{uri: "https://s3-alpha-sig.figma.com/img/99f8/a80e/33642431e9b5a27620ecc2316ca3b75d?Expires=1642377600&Signature=NyYuEauHy5gCxcocLEYX2i8DHdYKdZdw6DUdf3y4VnejgIwdqfajmWu~NvKGwdUVM694hyA0dgJTzC6BsfsB27jFaDYnjt6SUjnzQhwNmkY0nrn4sTLGPxWfkRaskvsiBTeV30f7derrE5I7HfV9Aiv~lW-QS757OF52mZS1IjXN~6GwQ~Cea2E4HwowzJO3497OthDlRfL-abqrRT08b-rIvopbLDJIzF61Puz0ABg29POPD24tE5uX5iu5tCdwU8jjHLKOPEOe-KhNJ~IDGhmCPuTLjoU3Rm6dixtFa1iKiEqaiHeNjptGf~AEiUbeAD-HkvzY4wWyK20~Li3xxg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"}}></Image>
+    <View >
+      <Image style={styles.logo} resizeMode="contain" source={{uri: "https://s3-alpha-sig.figma.com/img/99f8/a80e/33642431e9b5a27620ecc2316ca3b75d?Expires=1643587200&Signature=Ol1RxUGeewLFHbfbzSzcu-U1xjJXQ6tQ50Cy712zrd3K0aCw2MuubDcUWMD3r3bedjCjbBFCWHMHle2EBHs7J9m7H356lpqTgd4ALXeMXA6bPUNIlihQsq~-IeG8QN8BHkj1HYPkBevBfd2XI9TIBf2oRj9-eY5OjwffpShAQChLl4nhe55QJtbz0V6P06c7Yr4WU57z4u-~~9APCu~K1~F9Obp5LHdmmNKnTyGzVxxBXZs6mitJLdRVanGPKOS-8TisrHLNgoHoR~pBHJNrGEhr2iEgyAKVukYDlWq9K8xHi~petJ2gl0gIxCS6XJ~Ric3~qsVwbLO-j9KsIRaaTA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"}}></Image>
       <TextInput
         style={styles.input}
         onChangeText={onChangeText}
         placeholder="Email hoặc Số điện thoại"
         value={text}
       />
-      <View>
+      
         <TextInput
           style={styles.input}
           onChangeText={onChangeNumber}
@@ -29,33 +30,33 @@ const loginscreen = () => {
           secureTextEntry={isSecureText}
         />
 
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={{ flexDirection: 'row', width: 24, height: 24, position: 'absolute', top: 20, right: 30 }} onPress={() => { setSecureText(!isSecureText) }}>
 
           {!isSecureText ?
 
             <Image style={{ width: '100%', height: '100%' }} resizeMode="contain" source={{ uri: 'https://icons.iconarchive.com/icons/iconsmind/outline/256/Eye-2-icon.png' }} />
             : <Image style={{ width: '100%', height: '100%' }} resizeMode="contain" source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScMD3IcMCiSshEopomEAVcP--CPjx9lvVDlw&usqp=CAU' }} />}
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       
-      </View>
       
-      <TouchableOpacity><Text style={styles.pass} onPress = { () => {navigate('Forget')}}>Quên mật khẩu</Text></TouchableOpacity>
+      
+      <TouchableOpacity><Text style={styles.forgotpass} onPress = { () => {navigate('Forget')}}>Quên mật khẩu</Text></TouchableOpacity>
 
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttontext}>Đăng nhập</Text>
       </TouchableOpacity>
 
-      <View style={styles.last}>
-        <Text style={styles.yesno}>Bạn có tài khoản chưa?</Text>
+      <View style={styles.taikhoan}>
+        <Text style={styles.texttaikhoan}>Bạn đã có tài khoản?</Text>
         <TouchableOpacity>
-        <Text style={styles.login} onPress = { () => {navigate('Register')}} >Đăng ký</Text>
+        <Text style={styles.dangky} onPress = { () => {navigate('Register')}} >Đăng ký</Text>
         </TouchableOpacity>
       </View>
 
-      <Text style={styles.note}>- Hoặc đăng nhập với -</Text>
+      <Text style={styles.hoac}>- Hoặc đăng nhập với -</Text>
 
-      <View style={styles.ggfb}>
+      <View style={styles.loginand}>
         <TouchableOpacity>
         <Image style={styles.google} resizeMode="contain" source={{uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png"}}></Image>
         </TouchableOpacity>
@@ -65,85 +66,10 @@ const loginscreen = () => {
       </View>
 
       
-    </SafeAreaView>
+    </View>
   );
 };
 
-const styles = StyleSheet.create({
-  input: {
-    height: 50,
-    width: 360,
-    margin: 12,
-    borderWidth: 1,
-    paddingLeft: 25,
-    borderRadius: 10,
-    
-  },
-  logo: {
-    width: 166,
-    height: 49,
-    marginTop: 54,
-    marginLeft: 97,
-    marginBottom: 42,
-  },
-  pass: {
-    fontSize: 14,
-    marginLeft: 275,
-    marginBottom: 30,
-    marginTop: 10,
-    color: 'black',
-  },
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
 
-  },
-  buttontext: {
-    fontSize: 14,
-    fontWeight: 'bold',
-    backgroundColor:'green',
-    paddingHorizontal: 145,
-    paddingVertical: 15,
-    color: 'white',
-    borderRadius: 10,
-  },
-  yesno: {
-    color: 'black',
-    fontSize: 14,
-  },
-  login: {
-    color: 'green',
-    fontSize: 14,
-    marginLeft: 10,
-  },
-  last: {
-    flexDirection: 'row',
-    marginLeft: 30,
-    marginTop: 10,
-  },
-  note: {
-    fontSize: 14,
-    color: 'black',
-    marginTop: 50,
-    marginLeft: 120,
-  },
-  google: {
-    width: 34,
-    height: 34,
-
-  },
-  facebook: {
-    width: 38,
-    height: 38,
-    marginLeft: 30,
-
-  },
-  ggfb: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 15,
-  },
-});
 
 export default loginscreen ;
