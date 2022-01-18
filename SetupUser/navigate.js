@@ -3,11 +3,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
 import profile from './profile';
-import setup01 from './setup01';
-import setup02 from './setup02';
-import phone01 from './phone01';
-import phone02 from './phone02';
-import email01 from './email01';
+import setup01 from './AccountSetting';
+import setup02 from './PersonalSetup';
+import phone01 from './VerifyPhoneNumber';
+import phone02 from './VerifyOTP';
+import email01 from './VerifyEmail';
 import email02 from './email02';
 import setupnote from './setupnote';
 const Stack = createStackNavigator();

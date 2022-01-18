@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput,Image, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import styles from "./styles";
 
 const setup02 = () => {
     const [text, onChangeText] = React.useState("Trần trung Giới");
@@ -44,51 +45,11 @@ const setup02 = () => {
             value={text1}
             placeholder="Xác minh"
         />
-        <TouchableOpacity onPress = { () => {navigate('phone01')}} style={{backgroundColor: 'green',borderRadius: 10,justifyContent: 'center', height: '12%', width: '90%', alignItems: 'center', alignSelf: 'center'}}>
+        <TouchableOpacity onPress = { () => {navigate('phone01')}} style={styles.button}>
             <Text style={{fontSize: 14, color: 'white'}}>Hoàn thành</Text>
         </TouchableOpacity>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  input: {
-    height: 65,
-    margin: 20,
-    backgroundColor: '#E5E5E5',
-    borderRadius: 10,
-    padding: 20,
-  },
-  setup: {
-    borderBottomWidth: 1,
-    width: '90%',
-    alignSelf: 'center',
-    height: '10%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    },
-  title: {
-      fontSize: 18,
-      color: 'black',
-      fontWeight: 'bold',
-      padding: 20,
-      marginLeft: 30,
-  },
-  name: {
-      fontSize: 14,
-      color: 'green',
-      marginLeft: 20,
-  },
-  infor: {
-      fontSize: 14,
-      color: 'black',
-      marginLeft: 20,
-  },
-  icon1: {
-    width: 30,
-    height: 30,
-
-},
-});
 
 export default setup02;

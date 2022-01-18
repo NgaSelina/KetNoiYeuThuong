@@ -6,7 +6,7 @@ import styles from "./styles"
 const loginscreen = () => {
   const [text, onChangeText] = React.useState(null);
   const [number, onChangeNumber] = React.useState(null);
-  console.log('áasasas');
+  console.log('áarsasas');
   const { navigate } = useNavigation();
   const [isSecureText, setSecureText] = React.useState(true);
 
