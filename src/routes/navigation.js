@@ -2,11 +2,11 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import loginscreen from './LoginScreen';
-import registerscreen from './RegisterScreen';
-import forgetpassword from './ForgetPassword';
-import phone from './phone';
-import phone1 from './phone1';
+import loginscreen from '../pages/loginscreen/LoginScreen';
+import registerscreen from '../pages/loginscreen/RegisterScreen';
+import forgetpassword from '../pages/loginscreen/ForgetPassword';
+import phone from '../pages/loginscreen/phone';
+import phone1 from '../pages/loginscreen/phone1';
 const Stack = createStackNavigator();
 
 function MyStack() {

@@ -2,14 +2,14 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import profile from './profile';
-import setup01 from './AccountSetting';
-import setup02 from './PersonalSetup';
-import phone01 from './VerifyPhoneNumber';
-import phone02 from './VerifyOTP';
-import email01 from './VerifyEmail';
-import email02 from './email02';
-import setupnote from './setupnote';
+import profile from '../pages/userprofile/profile';
+import setup01 from '../pages/userprofile/AccountSetting';
+import setup02 from '../pages/userprofile/PersonalSetup';
+import phone01 from '../pages/userprofile/VerifyPhoneNumber';
+import phone02 from '../pages/userprofile/VerifyOTP';
+import email01 from '../pages/userprofile/VerifyEmail';
+import email02 from '../pages/userprofile/email02';
+import setupnote from '../pages/userprofile/setupnote';
 const Stack = createStackNavigator();
 
 function MyStack() {
