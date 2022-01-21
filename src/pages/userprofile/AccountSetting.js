@@ -30,7 +30,7 @@ const setup01 = () => {
                 <Text style={styles.text1}>Cài đặt thông báo</Text>
                 <Image style={styles.icon2} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_Yr9q0co3_aBUOpqf5oDI7VKUskywP2XidPOmi_mk8CYhwGUQdDHgxzoFF5w8Qd3keo&usqp=CAU"}}/> 
             </TouchableOpacity>
-            <TouchableOpacity style={styles.setup}>
+            <TouchableOpacity style={styles.setup} onPress = { () => {navigate('Login')}}>
              <Text style={styles.logout}>Đăng xuất</Text>
             </TouchableOpacity>
 

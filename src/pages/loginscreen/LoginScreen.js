@@ -43,7 +43,7 @@ const loginscreen = () => {
       
       <TouchableOpacity><Text style={styles.forgotpass} onPress = { () => {navigate('Forget')}}>Quên mật khẩu</Text></TouchableOpacity>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress = { () => {navigate('profile')}} >
         <Text style={styles.buttontext}>Đăng nhập</Text>
       </TouchableOpacity>
 
