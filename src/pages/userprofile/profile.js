@@ -1,7 +1,11 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-import styles from "./styles"
+import styles from "./styles";
+import Avatar from "../userprofile/FileSVG/avatar.svg";
+import Mail from "../userprofile/FileSVG/mail.svg";
+import Trangchu from "../userprofile/FileSVG/trangchu.svg";
+
 
 const profile = () => {
 
@@ -10,7 +14,7 @@ const profile = () => {
     return(
         <SafeAreaView style={{backgroundColor: '#E5E5E5', height: '100%'}}>
             <View style={{flexDirection: 'row', marginTop: 20}}>
-                <Image style={styles.image} resizeMode="contain" source={{uri: "https://taimienphi.vn/tmp/cf/aut/hinh-nen-vit-avatar-anh-vit-cute-ngoc-nghech-1.jpg"}}/>
+                <Avatar style={styles.image}/>
 
                 <View style={{marginLeft: 20, justifyContent: 'center'}}>
                     <Text style={styles.hoten}>Trần Trung Giới</Text>
@@ -44,7 +48,7 @@ const profile = () => {
                 <Text style={styles.text}>Đã xác minh</Text>
                 
                 <View style={{flexDirection: 'row', top: 40, justifyContent: 'space-around', width: '80%', marginLeft: 30}}>
-                    <Image style={styles.icon} resizeMode="contain" source={{uri: "https://www.pngfind.com/pngs/m/414-4148205_orange-transparent-email-icon-light-blue-mail-icon.png"}}/>
+                    <Mail style={styles.icon} />
                     <Image style={styles.icon} resizeMode="contain" source={{uri: "https://www.batdongsanhungphat.vn/wp-content/uploads/2021/08/kisspng-icon-phone-png-pic-5a753b39eeedd9.7165186815176323139787.jpg"}}/>
                     <Image style={styles.icon} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk6KrfyDbi4NgR493df0RlpSp1cVgrTRWVVyWnVgJ8RjlwZaVVEJPNerUawhFl2qpumVI&usqp=CAU"}}/>
                     <Image style={styles.icon} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-Gh6uC11b9BUzfJ1OAuC3MgwwQdOLZL7PA&usqp=CAU"}}/>

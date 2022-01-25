@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, Switch, Text, ImageBackground, Image, TouchableOpacity, View, RecyclerViewBackedScrollViewBase } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import Users from "../userprofile/FileSVG/user.svg";
 
 const setupnote = () => {
 
@@ -18,7 +19,7 @@ const setupnote = () => {
                 <TouchableOpacity onPress = { () => {goBack()}} >
                     <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/596/53/png-clipart-arrow-computer-icons-arrow-free-creative-pull-cdr-angle-thumbnail.png"}}/>
                 </TouchableOpacity>
-                <Text style={styles.title}>Cài đặt tài khoản</Text>
+                <Text style={styles.title}>Cài đặt thông báo</Text>
             </View>
             <View style={styles.setup}>
                 <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw593D1xmTHdIHF9WB15niALdw7Yfwy4o3g674n2oIJdK8qZZemPGsJPe6dyGDw6AtelY&usqp=CAU"}}/>
