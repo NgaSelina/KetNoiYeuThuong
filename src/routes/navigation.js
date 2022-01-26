@@ -15,6 +15,9 @@ import phone02 from '../pages/userprofile/VerifyOTP';
 import email01 from '../pages/userprofile/VerifyEmail';
 import email02 from '../pages/userprofile/email02';
 import setupnote from '../pages/userprofile/setupnote';
+import home from '../pages/account/home';
+import follower from '../pages/account/follower';
+import following from '../pages/account/following';
 
 const Stack = createStackNavigator();
 
@@ -34,6 +37,9 @@ function MyStack() {
       <Stack.Screen name="email01" component={email01} />
       <Stack.Screen name="email02" component={email02} />
       <Stack.Screen name="setupnote" component={setupnote} />
+      <Stack.Screen name="home" component={home} />
+      <Stack.Screen name="follower" component={follower} />
+      <Stack.Screen name="following" component={following} />
     </Stack.Navigator>
   );
 }

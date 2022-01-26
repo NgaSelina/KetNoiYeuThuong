@@ -34,12 +34,12 @@ const profile = () => {
                 </View>
                 <View style={styles.verticleLine}></View>
                 <View style={{flex: 0.33}}>
-                    <Text style={styles.numbers}>10</Text>
+                    <Text style={styles.numbers}>5</Text>
                     <Text style={styles.status}>Theo dõi</Text>
                 </View>
                 <View style={styles.verticleLine}></View>
                 <View style={{flex: 0.33}}>
-                    <Text style={styles.numbers}>10</Text>
+                    <Text style={styles.numbers}>5</Text>
                     <Text style={styles.status}>Đang theo dõi</Text>
                 </View>
             </View>
@@ -89,7 +89,7 @@ const profile = () => {
                     <Image style={styles.home} resizeMode="contain" source={{uri: "https://cdn.iconscout.com/icon/free/png-256/term-106119.png"}}/>
                     <Text style={styles.status}>Quản lý</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity onPress = { () => {navigate('home')}}>
                     <Image style={styles.home} resizeMode="contain" source={{uri: "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"}}/>
                     <Text style={styles.status}>Tài khoản</Text>
                 </TouchableOpacity>
