@@ -8,30 +8,30 @@ const DATA = [
     id: '1',
     avatar: 'https://haycafe.vn/wp-content/uploads/2021/12/hinh-anh-avatar-dep-cho-con-gai-dai-dien-Facebook-Zalo-Tiktok.jpg',
     title: 'Jacon Ginnish',
-    status: 'true',
+    status: 'Bỏ theo dõi',
   },
   {
     id: '2',
     avatar: 'https://sunglasshutusa.com/anh-dai-dien-dep-cho-nu/imager_44.jpg',
     title: 'Bette Davis',
-    status: 'true',
+    status: 'Bỏ theo dõi',
   },
   {
     id: '3',
     avatar: 'https://freetuts.net/upload/product_series/images/2021/06/24/1350/Avatar-Dep-Nu%207.jpg',
     title: 'Cary Grant',
-    status: 'true',
+    status: 'Bỏ theo dõi',
   },
   {
     id: '4',
     avatar: 'https://freetuts.net/upload/product_series/images/2021/06/24/1350/Avatar-Dep-Nu%20(13).jpg',
     title: 'James Stewart',
-    status: 'true',
+    status: 'Bỏ theo dõi',
   },{
     id: '5',
     avatar: 'https://haycafe.vn/wp-content/uploads/2021/12/hinh-anh-avatar-dep-cho-con-gai-dai-dien-Facebook-Zalo-Tiktok.jpg',
     title: 'Jacon Ginnish',
-    status: 'true',
+    status: 'Bỏ theo dõi',
   },
 ];
 
@@ -41,7 +41,7 @@ const App = () => {
     <View style={styles.item}>
         <Image style = {styles.avatar} source={{uri: item.avatar}} resizeMode='cover'></Image>
         <Text style={styles.title}>{item.title}</Text>
-        
+
     </View>
   );
 
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
     marginLeft: 20,
-    flex: 0.8,
+    flex: 0.9,
   },
   avatar: {
     height: 50,
