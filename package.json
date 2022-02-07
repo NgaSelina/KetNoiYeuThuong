@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@react-native-community/clipboard": "^1.5.1",
-    "@react-native-community/viewpager": "^5.0.11",
     "@react-native-masked-view/masked-view": "^0.2.6",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
@@ -26,7 +25,6 @@
     "react-native-svg": "^12.1.1",
     "react-native-svg-transformer": "^1.0.0",
     "react-native-tab-view": "^3.1.1",
-    "react-native-viewpager": "^0.2.13",
     "react-router-dom": "^6.0.0-beta.8",
     "redux": "^4.1.2"
   },
