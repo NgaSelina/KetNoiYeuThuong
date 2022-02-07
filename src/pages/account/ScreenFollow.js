@@ -15,7 +15,7 @@ const SecondRoute = () => {
           {
             data.map(item => (
               <Component 
-                key={item.id} 
+                id={item.id} 
                 name={item.name}
                 avatar={item.avatar}
                 isFollow={item.isFollow}
@@ -35,7 +35,7 @@ const SecondRoute = () => {
           {
             dataFollow.map(item => (
               <Component 
-                key={item.id} 
+                id={item.id} 
                 name={item.name}
                 avatar={item.avatar}
                 isFollow={item.isFollow}

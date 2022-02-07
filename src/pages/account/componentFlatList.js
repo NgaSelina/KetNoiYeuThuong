@@ -3,7 +3,7 @@ import { StyleSheet, Text, Image, TouchableOpacity, View } from "react-native";
 import dataFollow from "./dataFollow";
 
 
-const Component = ({key ,name, avatar, isFollow, fromList}) => {
+const Component = ({id ,name, avatar, isFollow, fromList}) => {
     const [textFollowed, setTextFollowed] = useState('');
     const [IsFollowStatus, setIsFollowStatus] = useState(isFollow);
     useEffect(() => {
@@ -21,11 +21,20 @@ const Component = ({key ,name, avatar, isFollow, fromList}) => {
         if(IsFollowStatus === true){
             setTextFollowed('Bỏ theo dõi');
             setIsFollowStatus(false);
-            dataFollow.push({id: key, name: name, avatar: avatar, isFollow: isFollow});
+            dataFollow.push({id: id, name: name, avatar: avatar, isFollow: isFollow});
         }
         else {
-            let dataDelete = dataFollow.indexOf(key);
-            dataFollow.splice(dataDelete,1);
+            debugger
+            for( let i = 0; i < dataFollow.length; i++){ 
+                console.log('dataFollow[i].id', dataFollow[i].id);
+                if ( dataFollow[i].id == id) { 
+            
+                    dataFollow.splice(i, 1); 
+                }
+            
+            }
+            // console.log('dataFollowNew', dataDelete);
+            // dataFollow.splice(dataDelete,1);
             setTextFollowed('Theo dõi');
             setIsFollowStatus(true);
         }
