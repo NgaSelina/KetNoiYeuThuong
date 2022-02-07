@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
 import { StyleSheet, Text, Image, TouchableOpacity, View } from "react-native";
+import dataFollow from "./dataFollow";
 
 
-const Component = ({name, avatar, isFollow}) => {
+const Component = ({key ,name, avatar, isFollow, fromList}) => {
     const [textFollowed, setTextFollowed] = useState('');
     const [IsFollowStatus, setIsFollowStatus] = useState(isFollow);
     useEffect(() => {
@@ -20,8 +21,11 @@ const Component = ({name, avatar, isFollow}) => {
         if(IsFollowStatus === true){
             setTextFollowed('Bỏ theo dõi');
             setIsFollowStatus(false);
+            dataFollow.push({id: key, name: name, avatar: avatar, isFollow: isFollow});
         }
         else {
+            let dataDelete = dataFollow.indexOf(key);
+            dataFollow.splice(dataDelete,1);
             setTextFollowed('Theo dõi');
             setIsFollowStatus(true);
         }
@@ -30,10 +34,11 @@ const Component = ({name, avatar, isFollow}) => {
         <View style={styles.bodyList}>
             <Image source={{ uri: avatar}} style={styles.avatar} />
             <Text style={styles.name}>{name}</Text>
-           
+           {fromList?(
             <TouchableOpacity style={IsFollowStatus ? styles.Following : styles.UnFollow} onPress={changeStatus}>
                     <Text style={styles.status}>{textFollowed}</Text>
             </TouchableOpacity>
+            ) : ( <View/>) }
         </View>
     )
 }

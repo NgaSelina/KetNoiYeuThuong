@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
 import Back from "../account/svg/back.svg";
 import Subscribe from "../account/svg/subscribe.svg";
-import styles from "./homeStyles";
+import styles from "./Styles/homeStyles";
 import { useNavigation } from '@react-navigation/native';
 
 const home = () => {
