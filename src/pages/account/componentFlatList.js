@@ -24,14 +24,10 @@ const Component = ({id ,name, avatar, isFollow, fromList}) => {
             dataFollow.push({id: id, name: name, avatar: avatar, isFollow: isFollow});
         }
         else {
-            debugger
             for( let i = 0; i < dataFollow.length; i++){ 
-                console.log('dataFollow[i].id', dataFollow[i].id);
                 if ( dataFollow[i].id == id) { 
-            
                     dataFollow.splice(i, 1); 
                 }
-            
             }
             // console.log('dataFollowNew', dataDelete);
             // dataFollow.splice(dataDelete,1);

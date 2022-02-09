@@ -71,8 +71,8 @@ const profile = () => {
                 <Text style={styles.text1}>Trợ giúp</Text>
                 <Image style={styles.icon2} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_Yr9q0co3_aBUOpqf5oDI7VKUskywP2XidPOmi_mk8CYhwGUQdDHgxzoFF5w8Qd3keo&usqp=CAU"}}/> 
             </TouchableOpacity>
-
-            <View style={{flexDirection: 'row', justifyContent: 'space-around',width: '100%', backgroundColor: 'white', alignSelf: 'center', top: 100}}>
+            <View style = {{marginBottom: '1%'}}>
+            {/* <View style={{flexDirection: 'row', justifyContent: 'space-around',width: '100%', backgroundColor: 'white', alignSelf: 'center'}}>
                 <TouchableOpacity >
                     <Image style={styles.home} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReCGnzhdGx9Ihn5TaNV1bWJ1mCSJ5oZJAQ9dKE10CGmGZ8oMIQ_7EfDgWHyhLloo12Xts&usqp=CAU"}}/>
                     <Text style={styles.status}>Trang chủ</Text>
@@ -93,6 +93,7 @@ const profile = () => {
                     <Image style={styles.home} resizeMode="contain" source={{uri: "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"}}/>
                     <Text style={styles.status}>Tài khoản</Text>
                 </TouchableOpacity>
+            </View> */}
             </View>
                 
         </SafeAreaView>
