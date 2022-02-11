@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, Switch, Text, ImageBackground, Image, TouchableOpacity, View, RecyclerViewBackedScrollViewBase } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import Back from "./FileSVG/back.svg";
-import Messenger from "./FileSVG/messenger.svg";
-import Group from "./FileSVG/group.svg";
 
-const setupnote = () => {
+
+const Setupnote = () => {
 
     const { navigate, goBack } = useNavigation();
 
@@ -97,4 +96,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default setupnote;
+export default Setupnote;

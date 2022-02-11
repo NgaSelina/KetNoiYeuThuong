@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         color: 'grey',
         alignSelf: 'center',
-        marginTop: 20,
+        marginTop: 10,
         marginBottom: 10,
     },
     inputbody: {
@@ -199,7 +199,7 @@ const styles = StyleSheet.create({
     color: 'green',
     alignSelf: 'center',
     marginLeft: 10,
-    marginTop: 20,
+    marginTop: 10,
 
     },
 });

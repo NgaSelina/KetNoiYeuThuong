@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import styles from "./styles";
 import Logo from "../loginscreen/logo.svg";
 
-const forgetpassword = () => {
+const Forgetpassword = () => {
   const [text, onChangeText] = React.useState(null);
   const [number, onChangeNumber] = React.useState(null);
 
@@ -39,4 +39,4 @@ const forgetpassword = () => {
   );
 };
 
-export default forgetpassword;
+export default Forgetpassword;

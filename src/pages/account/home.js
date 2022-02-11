@@ -5,7 +5,7 @@ import Subscribe from "../account/svg/subscribe.svg";
 import styles from "./Styles/homeStyles";
 import { useNavigation } from '@react-navigation/native';
 
-const home = () => {
+const Home = () => {
 
     const { navigate, goBack } = useNavigation();    
 
@@ -37,5 +37,5 @@ const home = () => {
     );
 };
 
-export default home;
+export default Home;
 

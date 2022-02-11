@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import styles from "./styles"
 import Logo from "../loginscreen/logo.svg";
 
-const loginscreen = () => {
+const Loginscreen = () => {
   const [text, onChangeText] = React.useState(null);
   const [number, onChangeNumber] = React.useState(null);
   console.log('áarsasas');
@@ -73,4 +73,4 @@ const loginscreen = () => {
 
 
 
-export default loginscreen ;
+export default Loginscreen ;

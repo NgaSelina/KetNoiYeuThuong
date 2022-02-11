@@ -5,7 +5,7 @@ import OTPInputView from "@twotalltotems/react-native-otp-input";
 import styles from "./styles";
 import Logo from "../loginscreen/logo.svg";
 
-const phone = () => {
+const Phone = () => {
   //const [text, onChangeText] = React.useState(null);
   //const [number, onChangeNumber] = React.useState(null);
 
@@ -36,4 +36,4 @@ const phone = () => {
 };
 
 
-export default phone;
+export default Phone;

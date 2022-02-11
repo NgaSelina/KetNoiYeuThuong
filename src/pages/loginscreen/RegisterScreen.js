@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import styles from "./styles";
 import Logo from "../loginscreen/logo.svg";
 
-const registerscreen = () => {
+const Registerscreen = () => {
   const [text, onChangeText] = React.useState(null);
   const [number, onChangeNumber] = React.useState(null);
 
@@ -57,4 +57,4 @@ const registerscreen = () => {
   );
 };
 
-export default registerscreen;
+export default Registerscreen;

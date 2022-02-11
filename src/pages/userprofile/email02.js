@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import Back from "./FileSVG/back.svg";
 
-const phone01 = () => {
+const Phone01 = () => {
 
     const { navigate, goBack } = useNavigation();
 
@@ -103,4 +103,4 @@ const styles = StyleSheet.create({
         },
 });
 
-export default phone01;
+export default Phone01;

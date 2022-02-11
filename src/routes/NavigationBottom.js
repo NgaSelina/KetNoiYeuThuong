@@ -5,29 +5,32 @@ import { NavigationContainer } from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
-import home from '../pages/account/home';
-import loginscreen from '../pages/loginscreen/LoginScreen';
-import registerscreen from '../pages/loginscreen/RegisterScreen';
-import forgetpassword from '../pages/loginscreen/ForgetPassword';
-import phone from '../pages/loginscreen/phone';
-import phone1 from '../pages/loginscreen/phone1';
-import profile from '../pages/userprofile/profile';
-import setup01 from '../pages/userprofile/AccountSetting';
-import setup02 from '../pages/userprofile/PersonalSetup';
-import phone01 from '../pages/userprofile/VerifyPhoneNumber';
-import phone02 from '../pages/userprofile/VerifyOTP';
-import email01 from '../pages/userprofile/VerifyEmail';
-import email02 from '../pages/userprofile/email02';
-import setupnote from '../pages/userprofile/setupnote';
+import Home from '../pages/account/home';
+import Loginscreen from '../pages/loginscreen/LoginScreen';
+import Registerscreen from '../pages/loginscreen/RegisterScreen';
+import Forgetpassword from '../pages/loginscreen/ForgetPassword';
+import Phone from '../pages/loginscreen/phone';
+import Phone1 from '../pages/loginscreen/phone1';
+import Profile from '../pages/userprofile/profile';
+import Setup01 from '../pages/userprofile/AccountSetting';
+import Setup02 from '../pages/userprofile/PersonalSetup';
+import Phone01 from '../pages/userprofile/VerifyPhoneNumber';
+import Phone02 from '../pages/userprofile/VerifyOTP';
+import Email01 from '../pages/userprofile/VerifyEmail';
+import Email02 from '../pages/userprofile/email02';
+import Setupnote from '../pages/userprofile/setupnote';
 import TabViewExample from '../pages/account/ScreenFollow';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
     return (
-      <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor: '#60B939' }}>
+      <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor: '#60B939', }}
+      
+      >
         <Tab.Screen name="Trang chủ" component={MyStack} 
           options={{
+
             tabBarLabel: 'Trang chủ',
             tabBarIcon:({color, size}) => <MaterialCommunityIcons name="home" color={color} size={size}  /> }} />
         <Tab.Screen name="Cộng đồng" component={TabViewExample} 
@@ -49,26 +52,27 @@ function MyTabs() {
        
       </Tab.Navigator>
     );
-  }
+          }
 
   const Stack = createStackNavigator();
   function MyStack() {
     return (
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="profile" component={profile} />
-        <Stack.Screen name="Login" component={loginscreen} />
-        <Stack.Screen name="Register" component={registerscreen} />
-        <Stack.Screen name="Forget" component={forgetpassword} />
-        <Stack.Screen name="Phone" component={phone} />
-        <Stack.Screen name="Phone1" component={phone1} />
-        <Stack.Screen name="setup01" component={setup01} />
-        <Stack.Screen name="setup02" component={setup02} />
-        <Stack.Screen name="phone01" component={phone01} />
-        <Stack.Screen name="phone02" component={phone02} />
-        <Stack.Screen name="email01" component={email01} />
-        <Stack.Screen name="email02" component={email02} />
-        <Stack.Screen name="setupnote" component={setupnote} />
-        <Stack.Screen name="home" component={home} />
+        
+        <Stack.Screen name="profile" component={Profile} />
+        <Stack.Screen name="Login" component={Loginscreen} />
+        <Stack.Screen name="Register" component={Registerscreen} />
+        <Stack.Screen name="Forget" component={Forgetpassword} />
+        <Stack.Screen name="Phone" component={Phone} />
+        <Stack.Screen name="Phone1" component={Phone1} />
+        <Stack.Screen name="setup01" component={Setup01} />
+        <Stack.Screen name="setup02" component={Setup02} />
+        <Stack.Screen name="phone01" component={Phone01} />
+        <Stack.Screen name="phone02" component={Phone02} />
+        <Stack.Screen name="email01" component={Email01} />
+        <Stack.Screen name="email02" component={Email02} />
+        <Stack.Screen name="setupnote" component={Setupnote} />
+        <Stack.Screen name="home" component={Home} />
       </Stack.Navigator>
     );
   }

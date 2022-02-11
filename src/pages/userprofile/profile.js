@@ -16,7 +16,7 @@ import Evaluate from "./FileSVG/evaluate.svg";
 import Help from "./FileSVG/help.svg";
 import Next from "./FileSVG/next.svg";
 
-const profile = () => {
+const Profile = () => {
 
     const { navigate, goBack } = useNavigation();
 
@@ -87,4 +87,4 @@ const profile = () => {
 
 };
 
-export default profile;
+export default Profile;

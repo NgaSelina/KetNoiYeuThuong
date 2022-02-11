@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import styles from "./styles";
 import Logo from "../loginscreen/logo.svg";
 
-const phone1 = () => {
+const Phone1 = () => {
   const [text, onChangeText] = React.useState(null);
   const [number, onChangeNumber] = React.useState(null);
 
@@ -128,4 +128,4 @@ const phone1 = () => {
 //   },
 // });
 
-export default phone1 ;
+export default Phone1 ;

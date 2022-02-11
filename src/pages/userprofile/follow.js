@@ -2,7 +2,7 @@ import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View } from "react-native";
 
 
-const setup01 = () => {
+const Setup01 = () => {
 
 
     return(
@@ -60,4 +60,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default setup01;
+export default Setup01;

@@ -3,8 +3,9 @@ import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, Touc
 import { useNavigation } from '@react-navigation/native';
 import styles from "./styles";
 import Back from "./FileSVG/back.svg";
+import Vietnam from "./FileSVG/vietnam.svg";
 
-const phone01 = () => {
+const Phone01 = () => {
 
     const [number, onChangeNumber] = React.useState(null);
 
@@ -22,7 +23,7 @@ const phone01 = () => {
             
             <View style={styles.inputbody}>
                 <View style={styles.sdt}>
-                    <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://cheohanoi.vn/la-co-do-sao-vang-xuat-hien-lan-dau-tien/imager_102.jpg"}}/>
+                <Vietnam style={styles.icon1} />
                     <Text style={styles.noteverify}>+84</Text>
                 </View>
                 <TextInput
@@ -44,4 +45,4 @@ const phone01 = () => {
 
 };
 
-export default phone01;
+export default Phone01;

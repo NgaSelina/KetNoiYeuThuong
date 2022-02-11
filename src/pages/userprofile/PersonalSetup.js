@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import styles from "./styles";
 import Back from "./FileSVG/back.svg";
 
-const setup02 = () => {
+const Setup02 = () => {
     const [text, onChangeText] = React.useState("Trần trung Giới");
     const [number, onChangeNumber] = React.useState(null);
     const [text1, onChangeText1] = React.useState(null);
@@ -53,4 +53,4 @@ const setup02 = () => {
   );
 };
 
-export default setup02;
+export default Setup02;

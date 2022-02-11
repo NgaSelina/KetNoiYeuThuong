@@ -7,7 +7,7 @@ import Next from "./FileSVG/next.svg";
 import Noti from "./FileSVG/noti.svg";
 import Infor from "./FileSVG/infor.svg";
 
-const setup01 = () => {
+const Setup01 = () => {
 
     const { navigate, goBack } = useNavigation();
 
@@ -42,4 +42,4 @@ const setup01 = () => {
 
 
 
-export default setup01;
+export default Setup01;
