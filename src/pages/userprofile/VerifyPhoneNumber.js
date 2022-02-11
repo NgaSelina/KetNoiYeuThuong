@@ -2,6 +2,7 @@ import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View, RecyclerViewBackedScrollViewBase } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import styles from "./styles";
+import Back from "./FileSVG/back.svg";
 
 const phone01 = () => {
 
@@ -13,7 +14,7 @@ const phone01 = () => {
         <SafeAreaView style={{backgroundColor: 'white', height: '100%'}}>
 
             <TouchableOpacity style={styles.setup} onPress = { () => {goBack()}}>
-                <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/596/53/png-clipart-arrow-computer-icons-arrow-free-creative-pull-cdr-angle-thumbnail.png"}}/>
+                <Back style={styles.icon} />
             </TouchableOpacity>
 
             <Text style={styles.verify}>Xác minh số điện thoại {"\n"}của bạn.</Text>

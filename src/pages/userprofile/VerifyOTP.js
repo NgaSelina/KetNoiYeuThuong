@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, Touc
 import OTPInputView from "@twotalltotems/react-native-otp-input";
 import { useNavigation } from '@react-navigation/native';
 import styles from "./styles";
+import Back from "./FileSVG/back.svg";
 
 const phone02 = () => {
 
@@ -13,7 +14,7 @@ const phone02 = () => {
         <SafeAreaView style={{backgroundColor: 'white', height: '100%'}}>
 
             <TouchableOpacity onPress = { () => {goBack()}} style={styles.setup}>
-                <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/596/53/png-clipart-arrow-computer-icons-arrow-free-creative-pull-cdr-angle-thumbnail.png"}}/>
+                <Back style={styles.icon} />
             </TouchableOpacity>
 
             <Text style={styles.verify}>Xác minh số điện thoại {"\n"}của bạn.</Text>

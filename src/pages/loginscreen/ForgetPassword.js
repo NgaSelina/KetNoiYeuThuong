@@ -8,7 +8,7 @@ const forgetpassword = () => {
   const [text, onChangeText] = React.useState(null);
   const [number, onChangeNumber] = React.useState(null);
 
-  const { navigate } = useNavigation();
+  const { navigate, goBack } = useNavigation();
 
   return (
     <SafeAreaView>

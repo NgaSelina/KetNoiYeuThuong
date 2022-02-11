@@ -1,11 +1,20 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
-import styles from "./styles";
-import Avatar from "../userprofile/FileSVG/avatar.svg";
-import Mail from "../userprofile/FileSVG/mail.svg";
-import Trangchu from "../userprofile/FileSVG/trangchu.svg";
 
+import styles from "./styles";
+
+import Avatar from "../userprofile/FileSVG/avatar.svg";
+
+import Mail from "./FileSVG/mail.svg";
+import Call from "./FileSVG/call.svg";
+import Facebook from "./FileSVG/facebook.svg";
+import User from "./FileSVG/user.svg";
+
+import Setup from "./FileSVG/setup.svg";
+import Evaluate from "./FileSVG/evaluate.svg";
+import Help from "./FileSVG/help.svg";
+import Next from "./FileSVG/next.svg";
 
 const profile = () => {
 
@@ -48,52 +57,29 @@ const profile = () => {
                 <Text style={styles.text}>Đã xác minh</Text>
                 
                 <View style={{flexDirection: 'row', top: 40, justifyContent: 'space-around', width: '80%', marginLeft: 30}}>
-                    <Mail style={styles.icon} />
-                    <Image style={styles.icon} resizeMode="contain" source={{uri: "https://www.batdongsanhungphat.vn/wp-content/uploads/2021/08/kisspng-icon-phone-png-pic-5a753b39eeedd9.7165186815176323139787.jpg"}}/>
-                    <Image style={styles.icon} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk6KrfyDbi4NgR493df0RlpSp1cVgrTRWVVyWnVgJ8RjlwZaVVEJPNerUawhFl2qpumVI&usqp=CAU"}}/>
-                    <Image style={styles.icon} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV-Gh6uC11b9BUzfJ1OAuC3MgwwQdOLZL7PA&usqp=CAU"}}/>
+                    <Mail style={styles.icon}/>
+                    <Call style={styles.icon}/>
+                    <Facebook style={styles.icon}/>
+                    <User style={styles.icon}/>
                 </View>
             </View>
             <TouchableOpacity style={styles.setup} onPress = { () => {navigate('setup01')}}>
-                <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/557/991/png-clipart-computer-icons-setting-icon-desktop-wallpaper-android-thumbnail.png"}}/>
+                <Setup style={styles.icon}/>
                 <Text style={styles.text1}>Cài đặt tài khoản</Text>
-                <Image style={styles.icon2} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_Yr9q0co3_aBUOpqf5oDI7VKUskywP2XidPOmi_mk8CYhwGUQdDHgxzoFF5w8Qd3keo&usqp=CAU"}}/>   
+                <Next style={styles.icon}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.setup}>
-                <Image style={styles.icon1} resizeMode="contain" 
-                source={{uri: "https://e7.pngegg.com/pngimages/217/1024/png-clipart-computer-icons-star-symbol-black-star-angle-heart-thumbnail.png"}}/>
+                <Evaluate style={styles.icon}/>
                 <Text style={styles.text1}>Đánh giá ứng dụng</Text>
-                <Image style={styles.icon2} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_Yr9q0co3_aBUOpqf5oDI7VKUskywP2XidPOmi_mk8CYhwGUQdDHgxzoFF5w8Qd3keo&usqp=CAU"}}/> 
+                <Next style={styles.icon}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.setup}>
-            <Image style={styles.icon1} resizeMode="contain" 
-                source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMTTf4u8phdAfWyoFH6iYcSbqVd02oQOI5C_Hrcm88Kr6_9KupJe2QbJ03uJaXKY7vsKc&usqp=CAU"}}/>
+                <Help style={styles.icon}/>
                 <Text style={styles.text1}>Trợ giúp</Text>
-                <Image style={styles.icon2} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ_Yr9q0co3_aBUOpqf5oDI7VKUskywP2XidPOmi_mk8CYhwGUQdDHgxzoFF5w8Qd3keo&usqp=CAU"}}/> 
+                <Next style={styles.icon}/> 
             </TouchableOpacity>
             <View style = {{marginBottom: '1%'}}>
-            {/* <View style={{flexDirection: 'row', justifyContent: 'space-around',width: '100%', backgroundColor: 'white', alignSelf: 'center'}}>
-                <TouchableOpacity >
-                    <Image style={styles.home} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReCGnzhdGx9Ihn5TaNV1bWJ1mCSJ5oZJAQ9dKE10CGmGZ8oMIQ_7EfDgWHyhLloo12Xts&usqp=CAU"}}/>
-                    <Text style={styles.status}>Trang chủ</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Image style={styles.home} resizeMode="contain" source={{uri: "https://cdn.chanhtuoi.com/uploads/2021/09/w420/y-nghia-cua-cac-icon-trai-tim-jpg-1.jpg.webp"}}/>
-                    <Text style={styles.status}>Cộng đồng</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Image style={styles.home} resizeMode="contain" source={{uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbmkp1af587eKOlK_r8VcjySOz6v-ARWdtQVrdlRfCzw554EgcWL-WevSsou69h8HJ_cQ&usqp=CAU"}}/>
-                    <Text style={styles.status}>Tin nhắn</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Image style={styles.home} resizeMode="contain" source={{uri: "https://cdn.iconscout.com/icon/free/png-256/term-106119.png"}}/>
-                    <Text style={styles.status}>Quản lý</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress = { () => {navigate('home')}}>
-                    <Image style={styles.home} resizeMode="contain" source={{uri: "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"}}/>
-                    <Text style={styles.status}>Tài khoản</Text>
-                </TouchableOpacity>
-            </View> */}
+            
             </View>
                 
         </SafeAreaView>

@@ -2,6 +2,8 @@ import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Text, ImageBackground, Image, TouchableOpacity, View, RecyclerViewBackedScrollViewBase } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
+import Back from "./FileSVG/back.svg";
+
 const phone01 = () => {
 
     const { navigate, goBack } = useNavigation();
@@ -12,7 +14,7 @@ const phone01 = () => {
         <SafeAreaView style={{backgroundColor: 'white', height: '100%'}}>
 
             <TouchableOpacity style={styles.setup} onPress = { () => {goBack()}}>
-                <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/596/53/png-clipart-arrow-computer-icons-arrow-free-creative-pull-cdr-angle-thumbnail.png"}}/>
+                <Back style={styles.icon} />
             </TouchableOpacity>
 
             <Text style={styles.title}>Xác minh thư điện tử {"\n"}của bạn.</Text>
@@ -32,7 +34,8 @@ const phone01 = () => {
                 </TouchableOpacity>
             </View>
             
-            <TouchableOpacity style={{backgroundColor: 'green',borderRadius: 10,justifyContent: 'center',marginTop: 20, height: '8%', width: '90%', alignItems: 'center', alignSelf: 'center'}}>
+            <TouchableOpacity onPress = { () => {navigate('profile')}}
+            style={{backgroundColor: 'green',borderRadius: 10,justifyContent: 'center',marginTop: 20, height: '8%', width: '90%', alignItems: 'center', alignSelf: 'center'}}>
                 <Text style={{fontSize: 14, color: 'white'}}>Hoàn thành</Text>
             </TouchableOpacity>
         </SafeAreaView>

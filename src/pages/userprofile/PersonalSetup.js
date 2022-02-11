@@ -2,6 +2,7 @@ import React from "react";
 import { SafeAreaView, StyleSheet, TextInput,Image, Text, TouchableOpacity, View } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import styles from "./styles";
+import Back from "./FileSVG/back.svg";
 
 const setup02 = () => {
     const [text, onChangeText] = React.useState("Trần trung Giới");
@@ -14,7 +15,7 @@ const setup02 = () => {
     <SafeAreaView >
         <View style={styles.setup}>
             <TouchableOpacity onPress = { () => {goBack()}}>
-                <Image style={styles.icon1} resizeMode="contain" source={{uri: "https://e7.pngegg.com/pngimages/596/53/png-clipart-arrow-computer-icons-arrow-free-creative-pull-cdr-angle-thumbnail.png"}}/>
+                <Back style={styles.icon} />
             </TouchableOpacity>
             <Text style={styles.title}>Thông tin cá nhân</Text>
         </View>
